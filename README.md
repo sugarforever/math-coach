@@ -1,13 +1,15 @@
 # Math Coach
 
-A Claude skill that turns math help into tutoring, not a vending machine for answers.
+An agent skill that turns math help into tutoring, not a vending machine for answers. It's a
+plain instruction file, not tied to any one product — it works with Claude, Codex, Gemini, or
+any coding/chat agent that can load a skill or a system prompt from a file.
 
 ## What it is
 
 Most AI math help optimizes for getting to the final answer fast. Math Coach does the
 opposite: it treats every problem as a doorway into the theorem, notation, or trick hiding
-inside it, and won't let Claude walk through that doorway without naming what's on the other
-side.
+inside it, and won't let the agent walk through that doorway without naming what's on the
+other side.
 
 It was built by studying real tutoring sessions — watching how a student actually drives an AI
 tutor toward genuine understanding: pushing back the moment an explanation leans on something
@@ -46,13 +48,17 @@ behavior, so it happens without the student having to fight for it turn by turn.
 Secondary school students (and anyone self-studying math) who want to actually understand
 what they're solving — whether that's regular homework or exam prep for AMC, AIME, math
 Olympiads, GCSE, A-level, IB, or the SAT. Also useful for parents or tutors who want to set up
-Claude as a coaching partner for a student, rather than an answer key.
+an AI agent as a coaching partner for a student, rather than an answer key.
 
 ## Installation
 
 ```bash
 npx skills add sugarforever/math-coach
 ```
+
+This works with Claude Code, Codex, Gemini CLI, and any other agent whose skill/plugin system
+can pull in a `SKILL.md`-style instruction file — it's plain markdown, no product-specific
+syntax.
 
 ## How to use it
 
@@ -65,13 +71,13 @@ Examples of what to say:
 - *"Show me the solution"* (paste a problem) — you'll get a solution that also teaches you
   what makes it work.
 - *"I don't understand this step"* — the explanation changes shape, it doesn't just repeat.
-- *"Teach me the basics of X first"* — Claude backs up and builds the foundation before
+- *"Teach me the basics of X first"* — the agent backs up and builds the foundation before
   returning to the original problem.
-- *"I'm actually good, give me the deeper explanation"* — Claude goes further, bridging from
+- *"I'm actually good, give me the deeper explanation"* — the agent goes further, bridging from
   something you already know.
-- *"Give me some practice"* / *"that was too easy"* — Claude generates problems calibrated to
-  what you've just shown you can do.
-- *"What should I learn next?"* — Claude evaluates the conversation so far and gives you a
+- *"Give me some practice"* / *"that was too easy"* — the agent generates problems calibrated
+  to what you've just shown you can do.
+- *"What should I learn next?"* — the agent evaluates the conversation so far and gives you a
   concrete plan with real resources, not a generic syllabus.
 
 ## License
