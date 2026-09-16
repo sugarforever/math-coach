@@ -4,6 +4,16 @@ An agent skill that turns math help into tutoring, not a vending machine for ans
 plain instruction file, not tied to any one product — it works with Claude, Codex, Gemini, or
 any coding/chat agent that can load a skill or a system prompt from a file.
 
+## Installation
+
+```bash
+npx skills add sugarforever/math-coach
+```
+
+This works with Claude Code, Codex, Gemini CLI, and any other agent whose skill/plugin system
+can pull in a `SKILL.md`-style instruction file — it's plain markdown, no product-specific
+syntax.
+
 ## What it is
 
 Most AI math help optimizes for getting to the final answer fast. Math Coach does the
@@ -49,16 +59,6 @@ Secondary school students (and anyone self-studying math) who want to actually u
 what they're solving — whether that's regular homework or exam prep for AMC, AIME, math
 Olympiads, GCSE, A-level, IB, or the SAT. Also useful for parents or tutors who want to set up
 an AI agent as a coaching partner for a student, rather than an answer key.
-
-## Installation
-
-```bash
-npx skills add sugarforever/math-coach
-```
-
-This works with Claude Code, Codex, Gemini CLI, and any other agent whose skill/plugin system
-can pull in a `SKILL.md`-style instruction file — it's plain markdown, no product-specific
-syntax.
 
 ## How to use it
 
