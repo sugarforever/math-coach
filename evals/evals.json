@@ -1,0 +1,63 @@
+{
+  "skill_name": "math-coach",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "altitude-hypotenuse",
+      "prompt": "In right triangle ABC, angle C = 90 degrees. D is the point on AB such that CD is perpendicular to AB. If AC = 15 and BC = 20, find the length of CD. Show me how to solve this.",
+      "expected_output": "A solution that leads with an elementary approach (e.g. area-of-triangle-two-ways or similar triangles), names any theorem/relation it uses (Pythagorean theorem, geometric mean relation) instead of using it silently, includes an actual labeled diagram of the triangle with D and CD marked, and ends with a specific offer of practice or a related idea.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "leads-elementary",
+          "text": "Solves using an elementary method (area-two-ways or similar triangles) as the primary path, not a more advanced technique (e.g. trigonometric identities beyond basic right-triangle trig, or coordinate bashing) presented as the only path"
+        },
+        {
+          "id": "names-pythagorean",
+          "text": "Explicitly names the Pythagorean theorem when using it to find AB"
+        },
+        {
+          "id": "has-diagram",
+          "text": "Includes an actual diagram (ASCII, SVG, or rendered figure) of triangle ABC with point D and segment CD labeled, not just a prose description of the setup"
+        },
+        {
+          "id": "ends-with-offer",
+          "text": "Ends the response with a specific, concrete offer (e.g. named practice problems or a named related topic), not a generic 'let me know if you have questions' or a bare final answer"
+        },
+        {
+          "id": "correct-answer",
+          "text": "Arrives at the correct value of CD = 12 (since AB = 25 by the Pythagorean theorem, and CD = (AC * BC) / AB = 300/25 = 12)"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "eval_name": "n3-minus-n-divisible-by-6",
+      "prompt": "I'm in year 10. My teacher gave us this: prove that n^3 - n is always divisible by 6 for any positive integer n. I tried plugging in numbers like n=2,3,4,5 and it always works out, but I don't know how to actually 'prove' it for all n. What does divisible by 6 even really require here, and why can't I just say I checked a few numbers?",
+      "expected_output": "A response that acknowledges the student's numeric-checking attempt as real partial progress, diagnoses the actual gap (the difference between verifying examples and a general proof, plus what 'divisible by 6' decomposes into: divisible by 2 AND by 3), and builds toward the elementary factoring proof (n^3 - n = (n-1)n(n+1), a product of three consecutive integers) using year-10-appropriate tools rather than induction or modular arithmetic jargon introduced without explanation. Should end with a specific offer of further practice.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "validates-attempt",
+          "text": "Explicitly acknowledges that checking specific numbers was valid, useful partial progress, before explaining why it isn't a full proof"
+        },
+        {
+          "id": "explains-divisible-by-6",
+          "text": "Explains that divisibility by 6 requires divisibility by both 2 and 3 (not just asserting divisibility by 6 directly)"
+        },
+        {
+          "id": "uses-factoring",
+          "text": "Factors n^3 - n as (n-1) * n * (n+1) and uses the fact that these are three consecutive integers as the core of the proof"
+        },
+        {
+          "id": "avoids-unexplained-jargon",
+          "text": "Does not introduce induction, modular arithmetic notation, or other university-level formalism without first explaining it in plain terms appropriate for a year-10 student"
+        },
+        {
+          "id": "ends-with-offer",
+          "text": "Ends the response with a specific, concrete offer of further practice or a related idea, not a generic sign-off or a bare conclusion"
+        }
+      ]
+    }
+  ]
+}
